@@ -8,18 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		36D1C1C22690B36A00F2DC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1C12690B36A00F2DC7E /* AppDelegate.swift */; };
-		36D1C1C62690B36A00F2DC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1C52690B36A00F2DC7E /* ViewController.swift */; };
 		36D1C1CB2690B36B00F2DC7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D1C1CA2690B36B00F2DC7E /* Assets.xcassets */; };
 		36D1C1CE2690B36B00F2DC7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D1C1CC2690B36B00F2DC7E /* LaunchScreen.storyboard */; };
+		36D1C1DD2690D80B00F2DC7E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1DC2690D80B00F2DC7E /* Person.swift */; };
+		36D1C1E02690D82E00F2DC7E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1DF2690D82E00F2DC7E /* NetworkService.swift */; };
+		36D1C1E32690D9FE00F2DC7E /* Network.Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1E22690D9FE00F2DC7E /* Network.Response.swift */; };
+		36D1C1E72691A31400F2DC7E /* ListContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1E62691A31400F2DC7E /* ListContainerController.swift */; };
+		36D1C1EB2691A31F00F2DC7E /* ListContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1EA2691A31F00F2DC7E /* ListContentController.swift */; };
+		36D1C1EE2691A35100F2DC7E /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1ED2691A35100F2DC7E /* PersonCell.swift */; };
+		36D1C1F12691C0CB00F2DC7E /* ContainerControllerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1F02691C0CB00F2DC7E /* ContainerControllerProtocols.swift */; };
+		36D1C1F62691F9F800F2DC7E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1F52691F9F800F2DC7E /* RootViewController.swift */; };
+		36D1C1FA2691FC5100F2DC7E /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1F92691FC5100F2DC7E /* GitHub.swift */; };
+		36D1C1FE2691FC6600F2DC7E /* GitHub.User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C1FD2691FC6600F2DC7E /* GitHub.User.swift */; };
+		36D1C2012691FCB800F2DC7E /* GitHub.Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C2002691FCB800F2DC7E /* GitHub.Responses.swift */; };
+		36D1C2062691FD5500F2DC7E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C2052691FD5500F2DC7E /* Endpoint.swift */; };
+		36D1C20A2691FE7700F2DC7E /* GitHub.GetUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C2092691FE7700F2DC7E /* GitHub.GetUsers.swift */; };
+		36D1C20D269222A100F2DC7E /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C20C269222A100F2DC7E /* ResponseProtocol.swift */; };
+		36D1C2122692395200F2DC7E /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C2112692395200F2DC7E /* ListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		36D1C1BE2690B36A00F2DC7E /* WakieEntryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakieEntryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D1C1C12690B36A00F2DC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36D1C1C52690B36A00F2DC7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36D1C1CA2690B36B00F2DC7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36D1C1CD2690B36B00F2DC7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36D1C1CF2690B36B00F2DC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36D1C1DC2690D80B00F2DC7E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		36D1C1DF2690D82E00F2DC7E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		36D1C1E22690D9FE00F2DC7E /* Network.Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.Response.swift; sourceTree = "<group>"; };
+		36D1C1E62691A31400F2DC7E /* ListContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContainerController.swift; sourceTree = "<group>"; };
+		36D1C1EA2691A31F00F2DC7E /* ListContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentController.swift; sourceTree = "<group>"; };
+		36D1C1ED2691A35100F2DC7E /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		36D1C1F02691C0CB00F2DC7E /* ContainerControllerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerControllerProtocols.swift; sourceTree = "<group>"; };
+		36D1C1F52691F9F800F2DC7E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		36D1C1F92691FC5100F2DC7E /* GitHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
+		36D1C1FD2691FC6600F2DC7E /* GitHub.User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub.User.swift; sourceTree = "<group>"; };
+		36D1C2002691FCB800F2DC7E /* GitHub.Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub.Responses.swift; sourceTree = "<group>"; };
+		36D1C2052691FD5500F2DC7E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		36D1C2092691FE7700F2DC7E /* GitHub.GetUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub.GetUsers.swift; sourceTree = "<group>"; };
+		36D1C20C269222A100F2DC7E /* ResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
+		36D1C2112692395200F2DC7E /* ListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +80,51 @@
 		36D1C1C02690B36A00F2DC7E /* WakieEntryProject */ = {
 			isa = PBXGroup;
 			children = (
+				36D1C2042691FD3C00F2DC7E /* Network */,
+				36D1C1F82691FC4200F2DC7E /* GitHub */,
+				36D1C1E52691A30200F2DC7E /* List Scene */,
 				36D1C1C12690B36A00F2DC7E /* AppDelegate.swift */,
-				36D1C1C52690B36A00F2DC7E /* ViewController.swift */,
+				36D1C1DC2690D80B00F2DC7E /* Person.swift */,
 				36D1C1CA2690B36B00F2DC7E /* Assets.xcassets */,
 				36D1C1CC2690B36B00F2DC7E /* LaunchScreen.storyboard */,
 				36D1C1CF2690B36B00F2DC7E /* Info.plist */,
+				36D1C1F02691C0CB00F2DC7E /* ContainerControllerProtocols.swift */,
+				36D1C1F52691F9F800F2DC7E /* RootViewController.swift */,
 			);
 			path = WakieEntryProject;
+			sourceTree = "<group>";
+		};
+		36D1C1E52691A30200F2DC7E /* List Scene */ = {
+			isa = PBXGroup;
+			children = (
+				36D1C1E62691A31400F2DC7E /* ListContainerController.swift */,
+				36D1C2112692395200F2DC7E /* ListDataSource.swift */,
+				36D1C1EA2691A31F00F2DC7E /* ListContentController.swift */,
+				36D1C1ED2691A35100F2DC7E /* PersonCell.swift */,
+			);
+			name = "List Scene";
+			sourceTree = "<group>";
+		};
+		36D1C1F82691FC4200F2DC7E /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				36D1C1F92691FC5100F2DC7E /* GitHub.swift */,
+				36D1C2002691FCB800F2DC7E /* GitHub.Responses.swift */,
+				36D1C1FD2691FC6600F2DC7E /* GitHub.User.swift */,
+				36D1C2092691FE7700F2DC7E /* GitHub.GetUsers.swift */,
+			);
+			name = GitHub;
+			sourceTree = "<group>";
+		};
+		36D1C2042691FD3C00F2DC7E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				36D1C1DF2690D82E00F2DC7E /* NetworkService.swift */,
+				36D1C1E22690D9FE00F2DC7E /* Network.Response.swift */,
+				36D1C2052691FD5500F2DC7E /* Endpoint.swift */,
+				36D1C20C269222A100F2DC7E /* ResponseProtocol.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,8 +196,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36D1C1C62690B36A00F2DC7E /* ViewController.swift in Sources */,
+				36D1C1FA2691FC5100F2DC7E /* GitHub.swift in Sources */,
+				36D1C1F62691F9F800F2DC7E /* RootViewController.swift in Sources */,
+				36D1C20D269222A100F2DC7E /* ResponseProtocol.swift in Sources */,
+				36D1C1DD2690D80B00F2DC7E /* Person.swift in Sources */,
+				36D1C1EB2691A31F00F2DC7E /* ListContentController.swift in Sources */,
+				36D1C1EE2691A35100F2DC7E /* PersonCell.swift in Sources */,
+				36D1C2122692395200F2DC7E /* ListDataSource.swift in Sources */,
+				36D1C1E72691A31400F2DC7E /* ListContainerController.swift in Sources */,
+				36D1C2012691FCB800F2DC7E /* GitHub.Responses.swift in Sources */,
+				36D1C1E02690D82E00F2DC7E /* NetworkService.swift in Sources */,
+				36D1C1FE2691FC6600F2DC7E /* GitHub.User.swift in Sources */,
+				36D1C20A2691FE7700F2DC7E /* GitHub.GetUsers.swift in Sources */,
+				36D1C2062691FD5500F2DC7E /* Endpoint.swift in Sources */,
+				36D1C1F12691C0CB00F2DC7E /* ContainerControllerProtocols.swift in Sources */,
 				36D1C1C22690B36A00F2DC7E /* AppDelegate.swift in Sources */,
+				36D1C1E32690D9FE00F2DC7E /* Network.Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

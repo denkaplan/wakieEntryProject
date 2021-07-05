@@ -11,9 +11,12 @@ final class ListContainerController: UIViewController {
 
 	var contentController: ContentControllerProtocol = ListContentController()
 	private let dataSource: ListDataSourceProtocol
+	private let avatarService: AvatarServiceProtocol
+	var contentOffset: CGFloat = 0
 
-	init(networkService: NetworkServiceProtocol) {
+	init(networkService: NetworkServiceProtocol & AvatarServiceProtocol) {
 		self.dataSource = ListDataSource(networkService: networkService)
+		self.avatarService = networkService
 		super.init(nibName: nil, bundle: nil)
 	}
 
@@ -24,9 +27,9 @@ final class ListContainerController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		navigationController?.navigationController.style
+		navigationController?.navigationBar.prefersLargeTitles = true
+		title = "Users"
 
-		title = "GitHub"
 		setupContentController()
 		tableViewController?.tableView.dataSource = self
 		tableViewController?.tableView.delegate = self
@@ -60,6 +63,11 @@ extension ListContainerController: UITableViewDataSource {
 		if let cell = tableView.dequeueReusableCell(withIdentifier: PersonCell.identifier) as? PersonCell,
 		   let user = dataSource.user(for: indexPath) {
 			cell.setModel(user: user)
+			if let url = URL(string: user.avatarUrl) {
+				avatarService.load(url: url, {
+					cell.updateAvatar($0)
+				})
+			}
 			return cell
 		}
 		return UITableViewCell()
@@ -70,5 +78,21 @@ extension ListContainerController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
+	}
+
+	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		let offsetY = scrollView.contentOffset.y
+		let height = scrollView.contentSize.height - scrollView.frame.size.height + 5
+
+		if offsetY >= abs(height) {
+			dataSource.loadNextPage { error in
+				if error == nil {
+					DispatchQueue.main.async {
+						self.tableViewController?.tableView.reloadData()
+					}
+				}
+			}
+		}
+
 	}
 }

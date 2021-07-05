@@ -10,14 +10,14 @@ import UIKit
 final class RootViewController: UIViewController {
 
 	private let stack: UINavigationController
-	private let networkService: NetworkServiceProtocol
+	private let networkService: NetworkServiceProtocol & AvatarServiceProtocol
 
 	convenience init() {
 		self.init(navigationController: UINavigationController(), networkService: NetworkService())
 	}
 
 	init(navigationController: UINavigationController,
-		 networkService: NetworkServiceProtocol) {
+		 networkService: NetworkServiceProtocol & AvatarServiceProtocol) {
 		self.stack = navigationController
 		self.networkService = networkService
 		super.init(nibName: nil, bundle: nil)

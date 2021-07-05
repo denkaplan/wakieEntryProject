@@ -10,22 +10,30 @@ import UIKit
 final class PersonCell: UITableViewCell {
 	static let identifier = "PersonCellReusableIdentifier"
 
+	override func prepareForReuse() {
+		imageView?.image = nil
+	}
+
 	private lazy var avatar: UIImageView = {
 		let imageView = UIImageView(frame: .zero)
 		imageView.contentMode = .scaleAspectFill
 		imageView.translatesAutoresizingMaskIntoConstraints = false
 		imageView.layer.cornerRadius = 14
-		imageView.backgroundColor = .red
+		imageView.layer.masksToBounds = true
 		return imageView
 	}()
 
-	private lazy var nameLabel: UILabel  = {
+	private lazy var nameLabel: UILabel = {
 		let label = UILabel()
 		label.numberOfLines = 1
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 
+	private lazy var shimmer: ShimmerView = {
+		let shimmer = ShimmerView(wrapped: avatar)
+		return shimmer
+	}()
 
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -56,6 +64,8 @@ private extension PersonCell {
 			nameLabel.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 24),
 			nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24)
 		])
+
+		shimmer.wrap(view: avatar)
 	}
 }
 
@@ -63,6 +73,13 @@ extension PersonCell {
 
 	func setModel(user: GitHub.User) {
 		nameLabel.text = user.login
+	}
+
+	func updateAvatar(_ image: UIImage?) {
+		DispatchQueue.main.async {
+			self.shimmer.isHidden = true
+			self.avatar.image = image
+		}
 	}
 }
 

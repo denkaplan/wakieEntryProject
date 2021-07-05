@@ -16,6 +16,7 @@ final class ListContentController: UITableViewController {
 		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 44
 		tableView.delegate = self
+		tableView.sectionFooterHeight = 44
 	}
 }
 

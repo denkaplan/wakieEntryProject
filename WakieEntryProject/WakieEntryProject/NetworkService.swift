@@ -5,12 +5,14 @@
 //  Created by Deniz Kaplan on 03.07.2021.
 //
 
-import Foundation
+import UIKit
 
 typealias ResultClosure<T: Codable> = (Network.Response<T>) -> ()
 
 protocol NetworkServiceProtocol: AnyObject {
-	func perform<T: Codable>(for endpoint: EndpointProtocol, _ type: T.Type, _ completion: @escaping ResultClosure<T>)}
+
+	func perform<T: Codable>(for endpoint: EndpointProtocol, _ type: T.Type, _ completion: @escaping ResultClosure<T>)
+}
 
 final class NetworkService {
 
@@ -91,5 +93,30 @@ private extension NetworkService {
 			request.httpBody = try? JSONSerialization.data(withJSONObject: endpoint.body, options: .prettyPrinted)
 		}
 		return request
+	}
+}
+
+extension NetworkService: AvatarServiceProtocol {
+
+	func load(url: URL, _ completion: @escaping (UIImage?) -> ()) {
+		session.dataTask(with: url) { [weak self] data, response, error in
+			guard let self = self else {
+				completion(nil)
+				return
+			}
+			if let _ = error {
+				completion(nil)
+				return
+			}
+			if let response = response, !self.validateHTTP(response: response) {
+				completion(nil)
+				return
+			}
+			guard let data = data else {
+				completion(nil)
+				return
+			}
+			completion(UIImage(data: data))
+		}.resume()
 	}
 }

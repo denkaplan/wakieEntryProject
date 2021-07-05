@@ -25,6 +25,8 @@
 		36D1C20A2691FE7700F2DC7E /* GitHub.GetUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C2092691FE7700F2DC7E /* GitHub.GetUsers.swift */; };
 		36D1C20D269222A100F2DC7E /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C20C269222A100F2DC7E /* ResponseProtocol.swift */; };
 		36D1C2122692395200F2DC7E /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C2112692395200F2DC7E /* ListDataSource.swift */; };
+		36D1C215269244C000F2DC7E /* AvatarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C214269244C000F2DC7E /* AvatarService.swift */; };
+		36D1C21926924A0000F2DC7E /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1C21826924A0000F2DC7E /* ShimmerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		36D1C2092691FE7700F2DC7E /* GitHub.GetUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub.GetUsers.swift; sourceTree = "<group>"; };
 		36D1C20C269222A100F2DC7E /* ResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
 		36D1C2112692395200F2DC7E /* ListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
+		36D1C214269244C000F2DC7E /* AvatarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarService.swift; sourceTree = "<group>"; };
+		36D1C21826924A0000F2DC7E /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		36D1C1C02690B36A00F2DC7E /* WakieEntryProject */ = {
 			isa = PBXGroup;
 			children = (
+				36D1C217269249F200F2DC7E /* Common UI */,
 				36D1C2042691FD3C00F2DC7E /* Network */,
 				36D1C1F82691FC4200F2DC7E /* GitHub */,
 				36D1C1E52691A30200F2DC7E /* List Scene */,
@@ -123,8 +128,17 @@
 				36D1C1E22690D9FE00F2DC7E /* Network.Response.swift */,
 				36D1C2052691FD5500F2DC7E /* Endpoint.swift */,
 				36D1C20C269222A100F2DC7E /* ResponseProtocol.swift */,
+				36D1C214269244C000F2DC7E /* AvatarService.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		36D1C217269249F200F2DC7E /* Common UI */ = {
+			isa = PBXGroup;
+			children = (
+				36D1C21826924A0000F2DC7E /* ShimmerView.swift */,
+			);
+			name = "Common UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +216,13 @@
 				36D1C1DD2690D80B00F2DC7E /* Person.swift in Sources */,
 				36D1C1EB2691A31F00F2DC7E /* ListContentController.swift in Sources */,
 				36D1C1EE2691A35100F2DC7E /* PersonCell.swift in Sources */,
+				36D1C21926924A0000F2DC7E /* ShimmerView.swift in Sources */,
 				36D1C2122692395200F2DC7E /* ListDataSource.swift in Sources */,
 				36D1C1E72691A31400F2DC7E /* ListContainerController.swift in Sources */,
 				36D1C2012691FCB800F2DC7E /* GitHub.Responses.swift in Sources */,
 				36D1C1E02690D82E00F2DC7E /* NetworkService.swift in Sources */,
 				36D1C1FE2691FC6600F2DC7E /* GitHub.User.swift in Sources */,
+				36D1C215269244C000F2DC7E /* AvatarService.swift in Sources */,
 				36D1C20A2691FE7700F2DC7E /* GitHub.GetUsers.swift in Sources */,
 				36D1C2062691FD5500F2DC7E /* Endpoint.swift in Sources */,
 				36D1C1F12691C0CB00F2DC7E /* ContainerControllerProtocols.swift in Sources */,
